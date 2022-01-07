@@ -1,0 +1,20 @@
+{
+	"start_coordinates": { "x": 2, "y": 2 },
+	"size": "3",
+	"texture": "/assets/textures/grass1.png",
+	"structures": [
+		{
+			"collision": true,
+			"texture": "",
+			"x": 2,
+			"y": 2
+		},
+		{
+			"collision": true,
+			"texture": "",
+			"x": 2,
+			"y": 2
+		}
+	]
+}
+
