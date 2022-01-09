@@ -2,21 +2,25 @@
 <html>
   <head>
     <title id="title"></title>
+    <link href="http://fonts.cdnfonts.com/css/gds-infinity" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://pixijs.download/release/pixi.js"></script>
-    <script src="src/constants.min.js"></script>
-    <script src="src/utils.min.js"></script>
-    <script src="src/entity.min.js"></script>
-    <script src="src/player.min.js"></script>
-    <script src="src/game.min.js"></script>
-    <script src="src/main.min.js"></script>
+    <script src="src/constants.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="src/map.js"></script>
+    <script src="src/entity.js"></script>
+    <script src="src/monster.js"></script>
+    <script src="src/player.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/main.js"></script>
   </head>
   <body id="root">
     <div id="player-ui">
       <div class="row">Name: <label id="player-name"></label></div>
       <div class="row">Level: <label id="player-level" /></div>
       <div class="row">HP: <label id="player-hp" /></div>
+      <div class="row">Coordinates: <label id="player-coor" /></div>
     </div>
     <div id="main-menu">
       <div class="menu-btn" onclick="StartGame()">Start</div>

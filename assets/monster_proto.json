@@ -1,0 +1,29 @@
+{
+  "1" : {
+    "name": "Motherfucker",
+    "level": 3,
+    "sprite_sheet": "monster1",
+    "scale": 1.3,
+
+    "animations": {
+      "IDLE": {
+        "animation": "Bringer-of-Death_Idle",
+        "speed": 0.15
+      },
+      "HURT": {
+        "animation": "Bringer-of-Death_Hurt",
+        "speed": 0.13
+      },
+      "DIE": {
+        "animation": "Bringer-of-Death_Death",
+        "speed": 0.13
+      }
+    },
+
+    "attr": {
+      "max_hp": 100,
+      "speed": 3
+    }
+  }
+  
+}

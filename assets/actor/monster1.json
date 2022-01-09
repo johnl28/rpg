@@ -1,0 +1,533 @@
+{"frames": {
+
+"Bringer-of-Death_Attack_1.png":
+{
+	"frame": {"x":1398,"y":1,"w":46,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":56},
+	"sourceSize": {"w":46,"h":56}
+},
+"Bringer-of-Death_Attack_2.png":
+{
+	"frame": {"x":981,"y":1,"w":62,"h":56},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":56},
+	"sourceSize": {"w":62,"h":56}
+},
+"Bringer-of-Death_Attack_3.png":
+{
+	"frame": {"x":916,"y":1,"w":63,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":63,"h":71},
+	"sourceSize": {"w":63,"h":71}
+},
+"Bringer-of-Death_Attack_4.png":
+{
+	"frame": {"x":850,"y":1,"w":64,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":71},
+	"sourceSize": {"w":64,"h":71}
+},
+"Bringer-of-Death_Attack_5.png":
+{
+	"frame": {"x":713,"y":1,"w":135,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":135,"h":78},
+	"sourceSize": {"w":135,"h":78}
+},
+"Bringer-of-Death_Attack_6.png":
+{
+	"frame": {"x":571,"y":1,"w":140,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":85},
+	"sourceSize": {"w":140,"h":85}
+},
+"Bringer-of-Death_Attack_7.png":
+{
+	"frame": {"x":310,"y":1,"w":129,"h":87},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":87},
+	"sourceSize": {"w":129,"h":87}
+},
+"Bringer-of-Death_Attack_8.png":
+{
+	"frame": {"x":441,"y":1,"w":128,"h":87},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":87},
+	"sourceSize": {"w":128,"h":87}
+},
+"Bringer-of-Death_Attack_9.png":
+{
+	"frame": {"x":1,"y":1,"w":114,"h":84},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":84},
+	"sourceSize": {"w":114,"h":84}
+},
+"Bringer-of-Death_Attack_10.png":
+{
+	"frame": {"x":1495,"y":58,"w":39,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":55},
+	"sourceSize": {"w":39,"h":55}
+},
+"Bringer-of-Death_Cast_1.png":
+{
+	"frame": {"x":1539,"y":1,"w":50,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":54},
+	"sourceSize": {"w":50,"h":54}
+},
+"Bringer-of-Death_Cast_2.png":
+{
+	"frame": {"x":1642,"y":1,"w":50,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":53},
+	"sourceSize": {"w":50,"h":53}
+},
+"Bringer-of-Death_Cast_3.png":
+{
+	"frame": {"x":1746,"y":1,"w":48,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":52},
+	"sourceSize": {"w":48,"h":52}
+},
+"Bringer-of-Death_Cast_4.png":
+{
+	"frame": {"x":1694,"y":1,"w":50,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":52},
+	"sourceSize": {"w":50,"h":52}
+},
+"Bringer-of-Death_Cast_5.png":
+{
+	"frame": {"x":1673,"y":56,"w":52,"h":51},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":51},
+	"sourceSize": {"w":52,"h":51}
+},
+"Bringer-of-Death_Cast_6.png":
+{
+	"frame": {"x":200,"y":1,"w":53,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":93},
+	"sourceSize": {"w":53,"h":93}
+},
+"Bringer-of-Death_Cast_7.png":
+{
+	"frame": {"x":255,"y":1,"w":53,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":93},
+	"sourceSize": {"w":53,"h":93}
+},
+"Bringer-of-Death_Cast_8.png":
+{
+	"frame": {"x":144,"y":1,"w":54,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":93},
+	"sourceSize": {"w":54,"h":93}
+},
+"Bringer-of-Death_Cast_9.png":
+{
+	"frame": {"x":87,"y":1,"w":55,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":93},
+	"sourceSize": {"w":55,"h":93}
+},
+"Bringer-of-Death_Death_1.png":
+{
+	"frame": {"x":1495,"y":1,"w":42,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":55},
+	"sourceSize": {"w":42,"h":55}
+},
+"Bringer-of-Death_Death_2.png":
+{
+	"frame": {"x":1308,"y":59,"w":47,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":56},
+	"sourceSize": {"w":47,"h":56}
+},
+"Bringer-of-Death_Death_3.png":
+{
+	"frame": {"x":1256,"y":59,"w":50,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":56},
+	"sourceSize": {"w":50,"h":56}
+},
+"Bringer-of-Death_Death_4.png":
+{
+	"frame": {"x":1102,"y":61,"w":51,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":58},
+	"sourceSize": {"w":51,"h":58}
+},
+"Bringer-of-Death_Death_5.png":
+{
+	"frame": {"x":1039,"y":1,"w":53,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":60},
+	"sourceSize": {"w":53,"h":60}
+},
+"Bringer-of-Death_Death_6.png":
+{
+	"frame": {"x":869,"y":74,"w":52,"h":62},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":62},
+	"sourceSize": {"w":52,"h":62}
+},
+"Bringer-of-Death_Death_7.png":
+{
+	"frame": {"x":992,"y":65,"w":50,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":61},
+	"sourceSize": {"w":50,"h":61}
+},
+"Bringer-of-Death_Death_8.png":
+{
+	"frame": {"x":1571,"y":57,"w":50,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":54},
+	"sourceSize": {"w":50,"h":54}
+},
+"Bringer-of-Death_Death_9.png":
+{
+	"frame": {"x":1777,"y":55,"w":42,"h":51},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":51},
+	"sourceSize": {"w":42,"h":51}
+},
+"Bringer-of-Death_Death_10.png":
+{
+	"frame": {"x":493,"y":90,"w":35,"h":42},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":42},
+	"sourceSize": {"w":35,"h":42}
+},
+"Bringer-of-Death_Hurt_1.png":
+{
+	"frame": {"x":1726,"y":55,"w":49,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":52},
+	"sourceSize": {"w":49,"h":52}
+},
+"Bringer-of-Death_Hurt_2.png":
+{
+	"frame": {"x":1450,"y":58,"w":43,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":55},
+	"sourceSize": {"w":43,"h":55}
+},
+"Bringer-of-Death_Hurt_3.png":
+{
+	"frame": {"x":1213,"y":60,"w":41,"h":57},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":57},
+	"sourceSize": {"w":41,"h":57}
+},
+"Bringer-of-Death_Idle_1.png":
+{
+	"frame": {"x":1406,"y":59,"w":42,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":56},
+	"sourceSize": {"w":42,"h":56}
+},
+"Bringer-of-Death_Idle_2.png":
+{
+	"frame": {"x":1195,"y":1,"w":42,"h":57},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":57},
+	"sourceSize": {"w":42,"h":57}
+},
+"Bringer-of-Death_Idle_3.png":
+{
+	"frame": {"x":809,"y":81,"w":43,"h":58},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":58},
+	"sourceSize": {"w":43,"h":58}
+},
+"Bringer-of-Death_Idle_4.png":
+{
+	"frame": {"x":1150,"y":1,"w":43,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":58},
+	"sourceSize": {"w":43,"h":58}
+},
+"Bringer-of-Death_Idle_5.png":
+{
+	"frame": {"x":1349,"y":1,"w":47,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":56},
+	"sourceSize": {"w":47,"h":56}
+},
+"Bringer-of-Death_Idle_6.png":
+{
+	"frame": {"x":1591,"y":1,"w":49,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":54},
+	"sourceSize": {"w":49,"h":54}
+},
+"Bringer-of-Death_Idle_7.png":
+{
+	"frame": {"x":1446,"y":1,"w":47,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":55},
+	"sourceSize": {"w":47,"h":55}
+},
+"Bringer-of-Death_Idle_8.png":
+{
+	"frame": {"x":751,"y":81,"w":45,"h":56},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":56},
+	"sourceSize": {"w":45,"h":56}
+},
+"Bringer-of-Death_Spell_1.png":
+{
+	"frame": {"x":120,"y":96,"w":34,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":21},
+	"sourceSize": {"w":34,"h":21}
+},
+"Bringer-of-Death_Spell_2.png":
+{
+	"frame": {"x":120,"y":96,"w":34,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":21},
+	"sourceSize": {"w":34,"h":21}
+},
+"Bringer-of-Death_Spell_3.png":
+{
+	"frame": {"x":224,"y":96,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+"Bringer-of-Death_Spell_4.png":
+{
+	"frame": {"x":224,"y":96,"w":37,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":18},
+	"sourceSize": {"w":37,"h":18}
+},
+"Bringer-of-Death_Spell_5.png":
+{
+	"frame": {"x":87,"y":96,"w":31,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":25},
+	"sourceSize": {"w":31,"h":25}
+},
+"Bringer-of-Death_Spell_6.png":
+{
+	"frame": {"x":657,"y":88,"w":33,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":38},
+	"sourceSize": {"w":33,"h":38}
+},
+"Bringer-of-Death_Spell_7.png":
+{
+	"frame": {"x":1536,"y":58,"w":33,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":55},
+	"sourceSize": {"w":33,"h":55}
+},
+"Bringer-of-Death_Spell_8.png":
+{
+	"frame": {"x":537,"y":90,"w":33,"h":59},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":59},
+	"sourceSize": {"w":33,"h":59}
+},
+"Bringer-of-Death_Spell_9.png":
+{
+	"frame": {"x":432,"y":90,"w":35,"h":59},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":59},
+	"sourceSize": {"w":35,"h":59}
+},
+"Bringer-of-Death_Spell_10.png":
+{
+	"frame": {"x":310,"y":90,"w":36,"h":59},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":59},
+	"sourceSize": {"w":36,"h":59}
+},
+"Bringer-of-Death_Spell_11.png":
+{
+	"frame": {"x":692,"y":88,"w":37,"h":57},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":57},
+	"sourceSize": {"w":37,"h":57}
+},
+"Bringer-of-Death_Spell_12.png":
+{
+	"frame": {"x":598,"y":88,"w":38,"h":57},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":57},
+	"sourceSize": {"w":38,"h":57}
+},
+"Bringer-of-Death_Spell_13.png":
+{
+	"frame": {"x":371,"y":90,"w":36,"h":59},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":59},
+	"sourceSize": {"w":36,"h":59}
+},
+"Bringer-of-Death_Spell_14.png":
+{
+	"frame": {"x":191,"y":96,"w":31,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":20},
+	"sourceSize": {"w":31,"h":20}
+},
+"Bringer-of-Death_Spell_15.png":
+{
+	"frame": {"x":156,"y":96,"w":33,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":21},
+	"sourceSize": {"w":33,"h":21}
+},
+"Bringer-of-Death_Spell_16.png":
+{
+	"frame": {"x":156,"y":96,"w":33,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":21},
+	"sourceSize": {"w":33,"h":21}
+},
+"Bringer-of-Death_Walk_1.png":
+{
+	"frame": {"x":1239,"y":1,"w":56,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":56},
+	"sourceSize": {"w":56,"h":56}
+},
+"Bringer-of-Death_Walk_2.png":
+{
+	"frame": {"x":1094,"y":1,"w":58,"h":54},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":54},
+	"sourceSize": {"w":58,"h":54}
+},
+"Bringer-of-Death_Walk_3.png":
+{
+	"frame": {"x":1044,"y":63,"w":58,"h":56},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":56},
+	"sourceSize": {"w":58,"h":56}
+},
+"Bringer-of-Death_Walk_4.png":
+{
+	"frame": {"x":1155,"y":61,"w":56,"h":57},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":57},
+	"sourceSize": {"w":56,"h":57}
+},
+"Bringer-of-Death_Walk_5.png":
+{
+	"frame": {"x":1297,"y":1,"w":50,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":56},
+	"sourceSize": {"w":50,"h":56}
+},
+"Bringer-of-Death_Walk_6.png":
+{
+	"frame": {"x":1623,"y":57,"w":48,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":54},
+	"sourceSize": {"w":48,"h":54}
+},
+"Bringer-of-Death_Walk_7.png":
+{
+	"frame": {"x":1357,"y":59,"w":47,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":56},
+	"sourceSize": {"w":47,"h":56}
+},
+"Bringer-of-Death_Walk_8.png":
+{
+	"frame": {"x":933,"y":74,"w":52,"h":57},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":57},
+	"sourceSize": {"w":52,"h":57}
+}},
+"animations": {
+	"Bringer-of-Death_Attack": ["Bringer-of-Death_Attack_1.png","Bringer-of-Death_Attack_2.png","Bringer-of-Death_Attack_3.png","Bringer-of-Death_Attack_4.png","Bringer-of-Death_Attack_5.png","Bringer-of-Death_Attack_6.png","Bringer-of-Death_Attack_7.png","Bringer-of-Death_Attack_8.png","Bringer-of-Death_Attack_9.png","Bringer-of-Death_Attack_10.png"],
+	"Bringer-of-Death_Cast": ["Bringer-of-Death_Cast_1.png","Bringer-of-Death_Cast_2.png","Bringer-of-Death_Cast_3.png","Bringer-of-Death_Cast_4.png","Bringer-of-Death_Cast_5.png","Bringer-of-Death_Cast_6.png","Bringer-of-Death_Cast_7.png","Bringer-of-Death_Cast_8.png","Bringer-of-Death_Cast_9.png"],
+	"Bringer-of-Death_Death": ["Bringer-of-Death_Death_1.png","Bringer-of-Death_Death_2.png","Bringer-of-Death_Death_3.png","Bringer-of-Death_Death_4.png","Bringer-of-Death_Death_5.png","Bringer-of-Death_Death_6.png","Bringer-of-Death_Death_7.png","Bringer-of-Death_Death_8.png","Bringer-of-Death_Death_9.png","Bringer-of-Death_Death_10.png"],
+	"Bringer-of-Death_Hurt": ["Bringer-of-Death_Hurt_1.png","Bringer-of-Death_Hurt_2.png","Bringer-of-Death_Hurt_3.png"],
+	"Bringer-of-Death_Idle": ["Bringer-of-Death_Idle_1.png","Bringer-of-Death_Idle_2.png","Bringer-of-Death_Idle_3.png","Bringer-of-Death_Idle_4.png","Bringer-of-Death_Idle_5.png","Bringer-of-Death_Idle_6.png","Bringer-of-Death_Idle_7.png","Bringer-of-Death_Idle_8.png"],
+	"Bringer-of-Death_Spell": ["Bringer-of-Death_Spell_1.png","Bringer-of-Death_Spell_2.png","Bringer-of-Death_Spell_3.png","Bringer-of-Death_Spell_4.png","Bringer-of-Death_Spell_5.png","Bringer-of-Death_Spell_6.png","Bringer-of-Death_Spell_7.png","Bringer-of-Death_Spell_8.png","Bringer-of-Death_Spell_9.png","Bringer-of-Death_Spell_10.png","Bringer-of-Death_Spell_11.png","Bringer-of-Death_Spell_12.png","Bringer-of-Death_Spell_13.png","Bringer-of-Death_Spell_14.png","Bringer-of-Death_Spell_15.png","Bringer-of-Death_Spell_16.png"],
+	"Bringer-of-Death_Walk": ["Bringer-of-Death_Walk_1.png","Bringer-of-Death_Walk_2.png","Bringer-of-Death_Walk_3.png","Bringer-of-Death_Walk_4.png","Bringer-of-Death_Walk_5.png","Bringer-of-Death_Walk_6.png","Bringer-of-Death_Walk_7.png","Bringer-of-Death_Walk_8.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "monster1.png",
+	"format": "RGBA8888",
+	"size": {"w":1820,"h":127},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:31ce8faabffa40522df0232c41be63a9:7ad4503a7507a541ee66df068271bfb9:be3779e66d4487ea728e8873b08038dc$"
+}
+}

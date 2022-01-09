@@ -1,5 +1,7 @@
 
-
+* {
+  font-family: 'GDS Infinity', sans-serif;
+}
 
 #root {
   background: #96ff61;
@@ -43,7 +45,7 @@
   width: 100%;
   height: 100%;
   z-index: 99;
-  background-image: url('/assets/textures/grass1.png');
+  background-image: url('/assets/ui/background.png');
   padding-top: 100px;
 }
 
