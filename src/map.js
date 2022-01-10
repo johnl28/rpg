@@ -2,6 +2,7 @@
 // Date: 08/01/2022
 
 class Map extends PIXI.TilingSprite {
+  entityVID = 1000;
   entities = {};
   basePosition = {};
   size = {};
@@ -15,6 +16,10 @@ class Map extends PIXI.TilingSprite {
   OnTickUpdate(game)
   {
     this.__updateBackgroundScroll(game.player);
+
+    for(let id in this.entities) {
+      this.entities[id].OnTickUpdate(game);
+    }
   }
 
   __updateBackgroundScroll(player)
@@ -23,10 +28,16 @@ class Map extends PIXI.TilingSprite {
     let pos = player.container.getGlobalPosition();
     let startMov = 200;
     let velocity = player.GetSpeed();
-    if(pos.x > gameInstance.width / 2 - 100 && this.x > (gameInstance.width - this.width)) {
+    let viewPortWidth = gameInstance.width;
+
+    if(pos.x > viewPortWidth / 2
+       && this.x > (viewPortWidth - this.width)) 
+    {
       this.x -= velocity;
     }
-    else if(pos.x < gameInstance.width / 2 - 100 && this.x < 0) {
+    else if(pos.x < viewPortWidth / 2 
+    && this.x < 0) 
+    {
       this.x += velocity;
     }
 
@@ -38,6 +49,30 @@ class Map extends PIXI.TilingSprite {
     }
   }
 
+  SpawnMonster(id, x, y)
+  {
+    let entProto = gameInstance.mobProto[id];
+    let vId = this.entityVID++;
+    let entity = new Monster(id, vId, this);
+    entity.SetAttributes(entProto.attributes);
+    entity.name = entProto.name;
+    entity.level = entProto.level;
+    entity.resourceName = entProto.sprite_sheet;
+    entity.stateAnimations = entProto.animations;
+    entity.Spawn(x, y);
+
+    if(entProto.scale) 
+      entity.SetScale(entProto.scale);
+
+    entity.SetZ(y + entity.GetHeight());
+    if(Math.floor(Math.random() * 2))
+    {
+      entity.SetDirection(-1);
+    }
+
+    this.entities[vId] = entity;
+  }
+
   LoadObjects(objects)
   {
     for(let i in objects)
@@ -45,7 +80,10 @@ class Map extends PIXI.TilingSprite {
       let objData = objects[i];
       let obj = new Entity(5000+i, this);
       obj.LoadSprite(objData.texture);
-      obj.SetZ(objData.y + obj.GetHeight());
+      if(objData.z)
+        obj.SetZ(objData.z);
+      else
+        obj.SetZ(objData.y + obj.GetHeight());
       if(objData.rotation) obj.SetRotation(objData.rotation);
       if(objData.scale) obj.SetScale(objData.scale);
       if(objData.collision) 
@@ -65,15 +103,7 @@ class Map extends PIXI.TilingSprite {
     for(let i in entities)
     {
       let entData = entities[i];
-      let entProto = gameInstance.mobProto[entData.id];
-      let vId = 1000+i;
-      let entity = new Monster(entData.id, vId, this);
-
-      entity.resourceName = entProto.sprite_sheet;
-      entity.stateAnimations = entProto.animations;
-      entity.Spawn(entData.x, entData.y);
-      if(entProto.scale) entity.SetScale(entProto.scale);
-      this.entities[vId] = entity;
+      this.SpawnMonster(entData.id, entData.x, entData.y);
     }
   }
 
@@ -85,6 +115,7 @@ class Map extends PIXI.TilingSprite {
       this.width = data.size.width;
       this.height = data.size.height;
       this.basePosition = data.base_position;
+      this.texture = LOADER.resources[data.texture].texture;
       this.LoadObjects(data.objects);
       this.LoadEntities(data.entities);
       callBack();

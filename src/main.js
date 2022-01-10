@@ -4,20 +4,11 @@ const CONFIG = {
 }
 
 let gameInstance = null;
-
-
-
-function StartGame()
-{
-  $("#main-menu").hide();
-  gameInstance.StartGame();
-}
-
-
+let gameInterface = null;
 
 $(document).ready(function() {
   $("title").text(CONFIG.title);
-  
+  gameInterface = new Interface();
   gameInstance = new Game();
   document.addEventListener('keypress', key => gameInstance.OnKeyDown(key));
   document.addEventListener('keyup', key => gameInstance.OnKeyUp(key));

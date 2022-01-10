@@ -12,6 +12,7 @@ class Game
   height = window.innerHeight;
   mobProto = {}
   running = false;
+
   app = null;
   player = null;
   map = null;
@@ -49,12 +50,13 @@ class Game
     this.app = new PIXI.Application({ width: this.width, height: this.height });
     document.body.appendChild(this.app.view);
     log("Game init DONE!");
-
+    gameInterface.SetLoadingText("Game initialization...");
     this.__loadAssets();
   }
 
   __loadAssets()
   {
+    gameInterface.SetLoadingText("Load assets...");
     const loader = PIXI.Loader.shared;
     loader.defaultQueryString = '' + Math.random();
     loader.baseUrl = ASSETS_PATH;
@@ -72,7 +74,8 @@ class Game
 
   __loadProto()
   {
-    fetch("assets/monster_proto.json")  
+    gameInterface.SetLoadingText("Load proto tables...");
+    fetch("assets/monster_proto.json", {cache: "no-store"})  
     .then(response => response.json())
     .then(data => {
       this.mobProto = data;
@@ -83,6 +86,7 @@ class Game
 
   __loadMap()
   {
+    gameInterface.SetLoadingText("Load map data...");
     this.map = new Map();
     this.map.Load("empire1", () => { 
       log("Map load DONE!")
@@ -95,19 +99,40 @@ class Game
 
   __loadCharacter()
   {
+    gameInterface.SetLoadingText("Load character...");
     this.player = new Player(0, 0, this.map);
     if(!this.player) {
       error("Player instance fail to create.");
       return;
     }
 
-    this.player.Spawn(this.map.basePosition.x, this.map.basePosition.y);
+    let x = this.map.basePosition.x;
+    let y = this.map.basePosition.y;
+    let data = localStorage.getItem("player_data");
+    if(data)
+    {
+      data = JSON.parse(data);
+      y = data.y;
+      x = data.x;
+      this.player.level = data.level;
+      this.player.name = data.name;
+      this.player.playTime = data.play_time;
+    }
+
+    this.player.Spawn(x, y);
+    
     log("Character load DONE!")
+
+    gameInterface.GameLoaded();
+
+    this.timeInterval = setInterval(() => {
+      this.player.playTime += 1;
+    }, 1000);
   }
 
   OnKeyUp(key)
   {
-    if(!this.running) return;
+    if(!this.running || this.player.IsState("DIE")) return;
     switch(key.code)
     {
       case 'KeyD':
@@ -116,6 +141,23 @@ class Game
       case 'KeyS':
       {
         this.player.SetIDLE();
+        break;
+      }
+      case 'Escape':
+      {
+        if(gameInterface.mobHud.is(":visible"))
+        {
+          gameInterface.mobHud.hide();
+          return;
+        }
+        
+        if(gameInterface.mainMenu.is(":visible") && this.running)
+        {
+          gameInterface.mainMenu.hide();
+          return;
+        }
+
+        gameInterface.mainMenu.show();
         break;
       }
     }
@@ -128,8 +170,14 @@ class Game
       return;
     }
 
+    
     switch(key.code)
     {
+      case 'KeyR':
+      {
+        this.player.Respawn();
+        break;
+      }
       case 'KeyD':
       case 'KeyA':
       {

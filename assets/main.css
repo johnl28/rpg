@@ -1,19 +1,35 @@
 
 * {
-  font-family: 'GDS Infinity', sans-serif;
+  font-family: "Varela Round";
 }
 
 #root {
-  background: #96ff61;
+  background-image: url('/assets/ui/background.png');
   overflow: hidden;
   margin: 0px;
+}
+
+#ui {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#ui * {
+  pointer-events: auto;
 }
 
 #game-ui {
   z-index: 1;
 }
 
-#player-ui {
+#hud {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -21,14 +37,37 @@
   left: 20px;
   width: 200px;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.589);
-  border-radius: 10px;
   z-index: 98;
+  gap: 10px;
   height: fit-content;
-  padding: 10px;
 }
 
-#player-ui > .row {
+#died-text{
+  display: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.712);
+  font-weight: bold;
+  text-shadow: black;
+  font-size: 40px;
+  color: white;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: calc(50% / 2);
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.705);
+  border-radius: 10px;
+  border: solid 1px rgb(75, 75, 75);
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+
+#hud > .row {
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -43,15 +82,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 99;
-  background-image: url('/assets/ui/background.png');
+  height: 100%; 
   padding-top: 100px;
+  background-color: rgba(0, 0, 0, 0.342);
 }
 
 .menu-btn {
   color: rgb(34, 34, 34);
-  background-color: rgb(145, 255, 0);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 4px 1px rgb(182, 182, 182);
   padding: 10px;
   width: 200px;
   font-size: 20px;
@@ -59,9 +98,114 @@
   text-align: center;
   user-select: none;
   cursor: pointer;
-  border: solid 1px rgb(72, 128, 0);
+  border-radius: 10px;
 }
 
 .menu-btn:hover {
-  background-color: rgb(113, 199, 0);
+  background-color: rgb(240, 239, 239);
 }
+
+.menu-btn:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+#loading-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('/assets/map/textures/grass2.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#mob-hud {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(100% / 2 - 100px);
+  top: 20px;
+  width: 200px;
+  height: fit-content;
+  gap: 10px;
+  display: none;
+}
+
+.hp-bar {
+  height: 10px;
+  max-width: 200px;
+  background-color: rgb(146, 0, 0);
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+#loading-text {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  text-shadow: black;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+

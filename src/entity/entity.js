@@ -10,12 +10,13 @@ class Entity
   scale = 1.0;
   type = "OBJECT";
   container = null;
-  collisionObj = null;
+  collisionBoxes = [];
   rootSprite = null;
   
   constructor(vId, stage)
   {
     let container = this.container = new PIXI.Container();
+    this.container.sortableChildren = true;
     container.visible = false;
     stage.addChild(container);
     this.virtualID = vId;
@@ -53,7 +54,7 @@ class Entity
   {
     this.container.x = x;
     this.container.y = y;
-    this.container.zIndex = y;
+    this.SetZ(y + this.container.height / 2);
   }
 
   SetZ(z)
@@ -63,24 +64,23 @@ class Entity
 
   SetCollisionBox(x = 0, y = 0, width = 0, height = 0)
   {
-    if(!this.collisionObj) {
-      this.collisionObj = new PIXI.Container();
-      this.container.addChild(this.collisionObj);
-    }
-
+    
+    let collisionObj = new PIXI.Container();
+    this.collisionBoxes.push(collisionObj);
+    this.container.addChild(collisionObj);
+ 
     let nwidth = width ? width: this.container.width;
-    this.collisionObj.width = nwidth;
-    log(`${nwidth} xxxxx ${this.collisionObj.width}`)
-    this.collisionObj.height = height ? height: this.container.height;
+    collisionObj.width = nwidth;
+
+    collisionObj.height = height ? height: this.container.height;
 
 
-    if(this.collisionObj.x == "center")
-      this.collisionObj.x = this.container.width / 2 - this.collisionObj.width / 2;
+    if(collisionObj.x == "center")
+      collisionObj.x = this.container.width / 2 - collisionObj.width / 2;
     else
-      this.collisionObj.x = x;
+      collisionObj.x = x;
 
-
-    this.collisionObj.y = y;
+    collisionObj.y = y;
 
   }
 
@@ -97,8 +97,18 @@ class Entity
   SetScale(scale)
   {
     this.scale = scale;
-    this.container.scale.set(scale);
-    if(this.rootSprite) this.rootSprite.scale.set(scale);
+    if(this.rootSprite) 
+      this.rootSprite.scale.set(scale);
+
+  }
+
+  SetDirection(direction)
+  {
+    if(this.direction == direction) return;
+    //this.rootSprite.width *= -1;
+    this.container.width *= -1;
+    //this.container.x = this.container.x - this.container.width;
+    this.direction = direction;
   }
 
   SetAnimationSpeed(speed)
@@ -126,6 +136,7 @@ class Entity
     }
 
     sprite.scale.set(this.scale);
+    //this.container.pivot.y = this.container.height;
     //this.container.calculateBounds();
   }
 
@@ -175,14 +186,16 @@ class Actor extends Entity {
   resourceName = "";
   state = "";
   attacking = false;
+  onStateComplete = null;
 
   // Attrs
-  name = "";
+  name = "ACTOR";
   type = "ACTOR"
   attributes = {
     hp: 100,
     speed: 1,
     damage: 1,
+    range: 150
   }
 
   constructor(id, virtualID, stage)
@@ -190,6 +203,23 @@ class Actor extends Entity {
     super(virtualID, stage);
     this.id = id;
   }
+
+  __updateAttackState() {}
+
+  SetDirection(direction)
+  {
+    this.SetState("IDLE");
+    super.SetDirection(direction);
+  }
+
+
+  SetScale(scale)
+  {
+    super.SetScale(scale);
+    this.container.pivot.x = this.container.width / 2;
+    this.container.pivot.y =  this.container.height / 2;
+  }
+
 
   IsState(state)
   {
@@ -200,7 +230,6 @@ class Actor extends Entity {
   {
     this.SetState("IDLE");
     this.Show(x, y);
-    this.SetCollisionBox(0,0,0,0);
   }
 
   GetAttr(key)
@@ -221,15 +250,29 @@ class Actor extends Entity {
 
   GetDamage()
   {
-    return this.GetAttr("damage");
+    let totalDamage = this.GetAttr("damage");
+    let addDamage = this.stateAnimations[this.state].damage;
+    if (addDamage) totalDamage += addDamage;
+    return totalDamage;
   }
   
+  StateComplete()
+  {
+    if(this.onStateComplete) {
+      this.onStateComplete();
+      // this.onStateComplete = null;
+    }
+  }
 
-  SetState(state)
+  SetState(state, loop = true)
   {
     if(this.state == state) return;
     this.state = state;
+    if(this.rootSprite) this.rootSprite.loop = loop;
     this.UpdateAnimation();
+    if(this.onStateComplete) {
+      this.rootSprite.onComplete = () => this.StateComplete();
+    }
   }
 
   SetIDLE()
@@ -267,7 +310,7 @@ class Actor extends Entity {
       let targetPos = entity.GetXY();
       let pos = this.GetXY();
 
-      log(`target ${targetPos.x}  pos ${pos.x} ccc ${entity.collisionObj.width}`);
+      // log(`target ${targetPos.x}  pos ${pos.x} ccc ${entity.collisionObj.width}`);
       if(this.moveDirection.x > 0 && targetPos.x <= pos.x && pos.y == targetPos.y)
       {
         return true;
@@ -302,61 +345,47 @@ class Actor extends Entity {
     }
   }
 
-  __updateAttack()
+  Die()
   {
-    if(!this.attacking) return;
-    let map = gameInstance.map;
-
-    for(let id in map.entities)
-    {
-      let entity = map.entities[id];
-      let targetPos = entity.GetXY();
-      let pos = this.GetXY();
-      let dist = distance(pos.x, targetPos.x, pos.y, targetPos.y);
-      //log(`dist ${dist} VID ${entity.virtualID}`);
-      if(dist > 100) {
-        continue;
-      }
-
-      this.Attack(entity);
-
+    this.onStateComplete = () => {
+      this.Destroy();
+      let map = gameInstance.map;
+      delete map.entities[this.virtualID];
     }
+
+    this.SetState("DIE", false);
   }
 
   Damage(amount)
   {
     let newHp = this.GetAttr("hp") - amount;
+    this.SetAttr("hp", newHp);
     if(newHp <= 0) {
-      this.rootSprite.loop = false;
-      this.SetState("DIE");
-      this.rootSprite.onComplete = () => {
-        this.Destroy();
-        let map = gameInstance.map;
-        delete map.entities[this.virtualID];
-      }
+      this.Die();
       return;
     }
-    
-    this.SetAttr("hp", newHp);
-    this.rootSprite.loop = false;
-    this.SetState("HURT");
-    this.rootSprite.onComplete = () => {
-      this.rootSprite.loop = true;
+
+    if(this.attacking) return;
+
+    this.onStateComplete = () => {
+      if(!this.IsState("HURT"))
+        return;
+
       this.SetState("IDLE");
     }
+
+    this.SetState("HURT", false);
   }
 
   Attack(entity)
   {
     if(entity.type == "OBJECT") return;
     entity.Damage(this.GetDamage());
-
   }
 
   OnTickUpdate(game)
   {
     this.__updateState();
-    this. __updateAttack();
   }
 
   UpdateAnimation()
@@ -364,6 +393,7 @@ class Actor extends Entity {
     const stateAnimations = this.stateAnimations[this.state];
     if(!stateAnimations) {
       error(`Couldn't load the animation for state ${this.state}, actor id ${this.id}.`);
+      this.SetIDLE();
     }
 
     this.LoadSpriteSheet(this.resourceName, stateAnimations.animation);

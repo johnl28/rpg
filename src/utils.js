@@ -19,3 +19,8 @@ function distance(x1, x2, y1, y2)
 
   return Math.sqrt(a*a + b*b);
 }
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
