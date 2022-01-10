@@ -54,7 +54,7 @@ class Player extends Actor
     hp: 100,
     maxHp: 100,
     speed: 2,
-    damage: 30
+    damage: 5
   }
 
   constructor(id, virtualID, stage)
