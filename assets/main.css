@@ -138,11 +138,13 @@
 }
 
 .hp-bar {
-  height: 10px;
+  height: fit-content;
+  font-size: 15px;
   max-width: 200px;
   background-color: rgb(146, 0, 0);
   border-radius: 5px;
   transition-duration: 0.3s;
+  text-align: center;
 }
 
 #loading-text {

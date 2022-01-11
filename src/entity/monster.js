@@ -45,6 +45,7 @@ class Monster extends Actor
   
   Die()
   {
+    log("HEY I DIED!!!")
     gameInterface.mobHud.hide();
     super.Die();
   }
@@ -59,11 +60,9 @@ class Monster extends Actor
     let dist = distance(pos.x, targetPos.x, pos.y, targetPos.y);
 
     if(dist < this.GetAttr("range")) {
-      this.rootSprite.loop = false;
       this.onStateComplete = () => {
         this.attacking = false;
         this.Attack(gameInstance.player);
-        this.rootSprite.loop = true;
         this.SetIDLE();
       }
 
@@ -85,6 +84,7 @@ class Monster extends Actor
 
   Damage(amount)
   {
+    if(this.IsState("DIE")) return;
     super.Damage(amount);
     gameInterface.UpdateMobHud(this);
   }

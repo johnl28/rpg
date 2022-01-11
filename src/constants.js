@@ -24,6 +24,7 @@ const ASSETS = {
   "tree7": 'map/textures/tree7.png',
   "hill1": 'map/textures/hill1.png',
   "rock1": 'map/textures/rock1.png',
+  "chest": 'map/textures/chest.png',
 
   // actors
   "player": 'actor/player.json',

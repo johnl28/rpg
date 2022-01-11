@@ -45,7 +45,7 @@
       "maxHp": 10,
       "speed": 2,
       "damage": 2,
-      "range": 150
+      "range": 80
     },
 
     "animations": {
@@ -81,7 +81,7 @@
       "maxHp": 60,
       "speed": 1,
       "damage": 3,
-      "range": 150
+      "range": 100
     },
 
     "animations": {

@@ -7,7 +7,7 @@
   },
 
   "size": { 
-    "width": 3000, 
+    "width": 5000, 
     "height": 1500 
   },
 
@@ -31,11 +31,30 @@
       "scale": 0.3
     },
     {
+      "texture": "tree2",
+      "x": 2348,
+      "y": 314,
+      "scale": 1.1
+    },
+    {
       "texture": "hill1",
       "x": 765,
       "y": 152,
       "z": 1,
       "collision": [ 0, 0, 100, 100 ]
+    },
+    {
+      "texture": "hill1",
+      "x": 2000,
+      "y": -300,
+      "z": 1,
+      "collision": [ 0, 0, 100, 100 ]
+    },
+    {
+      "texture": "chest",
+      "x": 2346,
+      "y": 48,
+      "scale": 0.5
     },
     {
       "texture": "bush2",
@@ -65,6 +84,12 @@
       "texture": "tree7",
       "x": 300,
       "y": 1000,
+      "scale": 1.2
+    },
+    {
+      "texture": "tree7",
+      "x": 2738,
+      "y": 926,
       "scale": 1.2
     },
     {

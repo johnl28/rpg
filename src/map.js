@@ -30,12 +30,21 @@ class Map extends PIXI.TilingSprite {
     let velocity = player.GetSpeed();
     let viewPortWidth = gameInstance.width;
 
-    if(pos.x > viewPortWidth / 2
+    if(pos.x > viewPortWidth) {
+      velocity = 300;
+    }
+
+    if(pos.x < 0) {
+      this.x = 0;
+      return;
+    }
+
+    if(pos.x > ((viewPortWidth / 2) - 20)
        && this.x > (viewPortWidth - this.width)) 
     {
       this.x -= velocity;
     }
-    else if(pos.x < viewPortWidth / 2 
+    if(pos.x < ((viewPortWidth / 2) + 20)
     && this.x < 0) 
     {
       this.x += velocity;

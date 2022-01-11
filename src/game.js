@@ -1,4 +1,4 @@
-// Copyright Ioan Criste (Johnl), All rights reseved
+// Copyright Ioan Criste (Johnl), All rights reserved
 // Date: 08/01/2022
 
 
@@ -48,6 +48,7 @@ class Game
   __initGame()
   {
     this.app = new PIXI.Application({ width: this.width, height: this.height });
+    PIXI.Ticker.shared.maxFPS = 40;
     document.body.appendChild(this.app.view);
     log("Game init DONE!");
     gameInterface.SetLoadingText("Game initialization...");

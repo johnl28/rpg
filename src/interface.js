@@ -79,6 +79,7 @@ class Interface
     let value = percentage / 100.0 * 200.0;
     $("#monster-name").text(`Lv.${monster.level} ${monster.name}`);
     $("#monster-hp").css("width", value);
+    $("#monster-hp").text(`${curHp}/${maxHp}`);
   }
 
   ToggleDiedText()
@@ -116,6 +117,11 @@ class Interface
     this.loading.append(`<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`);
     this.loading.append(`<div id="loading-text"></div>`);
     this.loading.hide();
+  }
+
+  __createTaskBar()
+  {
+
   }
 
   __initHud()

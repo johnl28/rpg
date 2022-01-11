@@ -30,7 +30,7 @@ class Player extends Actor
       speed: 0.2
     },
     "RUN": {
-      animation: "adventurer-run3",
+      animation: "adventurer-run3", 
       speed: 0.25
     },
     "TURN": {
@@ -54,7 +54,7 @@ class Player extends Actor
     hp: 100,
     maxHp: 100,
     speed: 2,
-    damage: 5
+    damage: 2
   }
 
   constructor(id, virtualID, stage)
@@ -73,12 +73,14 @@ class Player extends Actor
     
     let percentage = (parseFloat(curHp) / parseFloat(maxHp)) * 100.00;
     $("#player-hp").css("width", `${percentage}%`);
+    $("#player-hp").text(`${curHp}/${maxHp}`);
   }
 
   Spawn(x, y)
   {
     super.Spawn(x, y);
     this.SetScale(0.5);
+    this.SetZ(y);
   }
 
   TranslateInput(input)
@@ -168,7 +170,7 @@ class Player extends Actor
       let pos = this.GetXY();
       let dist = distance(pos.x, targetPos.x, pos.y, targetPos.y);
       //log(`dist ${dist} VID ${entity.virtualID}`);
-      if(dist > 150) {
+      if(dist > 150 || entity.IsState("DIE")) {
         continue;
       }
 
@@ -195,7 +197,6 @@ class Player extends Actor
     this.onStateComplete = () => {
       this.__updateAttackState();
       this.attacking = false;
-      log("attack done bitch;")
   
       if(!this.IsState("ATTACK3") && Math.floor(Math.random() * 101) < 50) {
         this.AttackInput("Combo");
