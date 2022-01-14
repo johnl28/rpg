@@ -1,0 +1,11 @@
+{
+  "sword1" : {
+    "texture": "hill1",
+    "scale": 1,
+    "type": "sword",
+    "level": 1,
+    "attributes": {
+
+    }
+  }
+}

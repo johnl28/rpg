@@ -41,14 +41,29 @@
       "x": 765,
       "y": 152,
       "z": 1,
-      "collision": [ 0, 0, 100, 100 ]
+      "collision": [ 
+        { "x": 59, "y": 148, "width": 20, "height": 100 },
+        { "x": 59, "y": 148, "width": 200, "height": 20 },
+        { "x": 253, "y": 23, "width": 20, "height": 130 },
+        { "x": 253, "y": 23, "width": 20, "height": 130 },
+        { "x": 59, "y": 283, "width": 20, "height": 130 },
+        { "x": 59, "y": 378, "width": 200, "height": 45 },
+        { "x": 250, "y": 410, "width": 20, "height": 200 },
+        { "x": 250, "y": 570, "width": 130, "height": 40 },
+        { "x": 440, "y": 570, "width": 125, "height": 40 },
+        { "x": 554, "y": 410, "width": 20, "height": 200 },
+        { "x": 554, "y": 377, "width": 200, "height": 45 },
+        { "x": 741, "y": 284, "width": 20, "height": 130 },
+        { "x": 741, "y": 148, "width": 20, "height": 100 },
+        { "x": 558, "y": 148, "width": 200, "height": 20 },
+        { "x": 554, "y": 23, "width": 20, "height": 130 }
+      ]
     },
     {
       "texture": "hill1",
       "x": 2000,
       "y": -300,
-      "z": 1,
-      "collision": [ 0, 0, 100, 100 ]
+      "z": 1
     },
     {
       "texture": "chest",
@@ -118,8 +133,8 @@
     { "id": "goblin", "x": 1500, "y": 500 },
     { "id": "demon", "x": 2200, "y": 600 },
     { "id": "goblin", "x": 350, "y": 300 },
-    { "id": "mushroom", "x": 650, "y": 620 },
-    { "id": "mushroom", "x": 786, "y": 234 }
+    { "id": "mushroom", "x": 1650, "y": 620 },
+    { "id": "mushroom", "x": 1786, "y": 234 }
   ]
 
 }

@@ -1,0 +1,10 @@
+{
+  "hill1" : {
+    "texture": "hill1",
+    "scale": 1,
+    "z": 1,
+    "collision": []
+  }
+}
+
+
