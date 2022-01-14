@@ -2,15 +2,22 @@
 <html>
   <head>
     <title id="title"></title>
+
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="The First Dungeon, a pixel world with lots of adventures. Play now for FREE!">
     <meta name="keywords" content="2D, rpg, game, puzzle, pixel, adventure">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Style -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
     <link rel="stylesheet" href="assets/ui/style.css">
     <link rel="stylesheet" href="assets/main.css">
+
+     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="https://pixijs.download/v6.2.1/pixi.min.js"></script>
     <script src="src/constants.min.js"></script>
     <script src="src/utils.min.js"></script>
     <script src="src/map.min.js"></script>
@@ -22,8 +29,14 @@
     <script src="src/main.min.js"></script>
   </head>
   <body id="root">
+
+    <!-- Noscript message -->
     <noscript>You cannot play the game with JavaScript disabled. Please enable it to be able to play.</noscript>
+
+    <!-- User interface -->
     <div id="ui"></div>
   </body>
+
+  <!-- Disable ajax cache -->
   <script>$.ajaxSetup({cache: false });</script>
 </html>

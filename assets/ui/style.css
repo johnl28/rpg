@@ -105,7 +105,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url('/assets/map/textures/grass2.png');
+  background-image: url('./map/textures/grass2.png');
   display: flex;
   align-items: center;
   justify-content: center;

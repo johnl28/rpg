@@ -4,7 +4,7 @@
 }
 
 #root {
-  background-image: url('/assets/ui/background.png');
+  background-image: url('./ui/background.png');
   overflow: hidden;
   margin: 0px;
 }
