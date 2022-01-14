@@ -24,7 +24,7 @@
   flex-direction: column;
   top: 20px;
   left: 20px;
-  width: 200px;
+  width: fit-content;
   height: 100px;
   z-index: 98;
   gap: 10px;
@@ -105,7 +105,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url('./map/textures/grass2.png');
+  background-image: url('../map/textures/grass2.png');
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,6 +134,19 @@
   border-radius: 5px;
   transition-duration: 0.3s;
   text-align: center;
+}
+
+#mini-map {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  background-image: url("../map/textures/grass2.png");
+  object-fit: scale-down;
+  border-radius: 50%;
+  border: solid 1px white;
 }
 
 #loading-text {

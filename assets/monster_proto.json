@@ -6,9 +6,9 @@
     "scale": 0.6,
 
     "attributes": {
-      "maxHp": 100,
-      "speed": 1,
-      "damage": 10,
+      "maxHp": 500,
+      "speed": 0.3,
+      "damage": 30,
       "range": 200
     },
 
@@ -35,6 +35,8 @@
       }
     }
   },
+
+
   "goblin" : {
     "name": "Goblin",
     "level": 3,
@@ -42,7 +44,7 @@
     "scale": 0.25,
 
     "attributes": {
-      "maxHp": 10,
+      "maxHp": 60,
       "speed": 2,
       "damage": 2,
       "range": 80
@@ -71,6 +73,8 @@
       }
     }
   },
+
+
   "mushroom" : {
     "name": "Mushroom",
     "level": 5,
@@ -78,7 +82,7 @@
     "scale": 0.35,
 
     "attributes": {
-      "maxHp": 60,
+      "maxHp": 160,
       "speed": 1,
       "damage": 3,
       "range": 100
