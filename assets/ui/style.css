@@ -1,4 +1,4 @@
-#ui {
+main {
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -6,17 +6,14 @@
   height: 100%;
   top:0;
   left:0;
-  z-index: 100;
+  z-index: 90;
   pointer-events: none;
 }
 
-#ui * {
+main * {
   pointer-events: auto;
 }
 
-#game-ui {
-  z-index: 1;
-}
 
 #hud {
   position: absolute;
@@ -31,7 +28,7 @@
   height: fit-content;
 }
 
-#died-text{
+#died-text {
   display: absolute;
   left: 0;
   top: 0;
@@ -56,6 +53,21 @@
   padding: 15px;
 }
 
+input {
+  background: rgba(0, 0, 0, 0.486);
+  padding: 10px;
+  color: white;
+  border: solid 1px rgb(75, 75, 75);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input:focus {
+  border-color: rgb(139, 139, 139);
+  outline: none;
+}
+
 #hud > .row {
   color: white;
   font-weight: bold;
@@ -67,37 +79,40 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
-  padding-top: 100px;
-  background-color: rgba(0, 0, 0, 0.342);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
 }
 
-.menu-btn {
-  color: rgb(34, 34, 34);
+button {
+  color: rgb(99, 99, 99);
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 4px 1px rgb(182, 182, 182);
+  box-shadow: 2px 3px 1px rgb(182, 182, 182);
   padding: 10px;
-  width: 200px;
-  font-size: 20px;
+  border: none;
+  border-radius: 5px;
   font-weight: bold;
-  text-align: center;
-  user-select: none;
-  cursor: pointer;
-  border-radius: 10px;
 }
 
-.menu-btn:hover {
+button:hover {
   background-color: rgb(240, 239, 239);
 }
 
-.menu-btn:active {
+button:active {
   box-shadow: none;
   transform: translateY(2px);
 }
+
+.menu-btn {
+  width: 200px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
 
 #loading-window {
   position: absolute;
@@ -119,6 +134,7 @@
   justify-content: center;
   position: absolute;
   left: calc(100% / 2 - 100px);
+  align-self: center;
   top: 20px;
   width: 200px;
   height: fit-content;
@@ -154,4 +170,30 @@
   color: white;
   font-size: 30px;
   text-shadow: black;
+}
+
+
+#name-window {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.699);
+}
+
+#name-window .box {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 30px;
+  align-items: center;
+}
+
+#name-window button {
+  width: 100%;
 }

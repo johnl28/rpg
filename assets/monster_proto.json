@@ -32,6 +32,11 @@
       "ATTACK": {
         "animation": "attack1",
         "speed": 0.2
+      },
+      "ATTACK2": {
+        "damage": 20,
+        "animation": "attack2",
+        "speed": 0.2
       }
     }
   },

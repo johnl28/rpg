@@ -1,0 +1,57 @@
+
+
+<!--RESTART POP-->
+<div id="died-text">
+  YOU DIED! PRESS (R) FOR REVIVING.
+</div>
+
+<!--INPUT NAME POP-->
+<div id="name-window">
+  <div class="box">
+    Name:
+    <input maxlength="30" spellcheck="false" id="name-input" />
+    <button onclick="InitData()">Play</button>
+  </div>
+</div>
+
+<!--MAIN MENU-->
+<div id="main-menu">
+  <div class="box" id="menu-buttons" style="display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+    <button id="resume-btn" class="menu-btn" onclick="Resume()">Close</button>
+    <button id="start-btn" class="menu-btn" onclick="StartGame()">Start</button>
+    <button class="menu-btn" onclick="OpenSettings()">Settings</button>
+    <button class="menu-btn" onclick="OpenCredits()">Credits</button>
+  </div>
+</div>
+
+<!--LOADING WINDOW-->
+<div id="loading-window">
+  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+  <div id="loading-text"></div>
+</div>
+
+
+<!--MOB HUD-->
+<div id="mob-hud" class="box">
+  <div id="monster-name">Name Monster</div>
+  <div class="hp-bar" id="monster-hp"></div>
+</div>
+
+
+<!--PLAYER HUD-->
+<div id="hud" class="box">
+  <div class="row">
+    Name: <label id="player-name"></label>
+  </div>
+  <div class="row">
+    Level: <label id="player-level" />
+  </div>
+  <div class="row">
+    <div id="player-hp" class="hp-bar" />
+  </div>
+  <div class="row">
+    Coordinates: <label id="player-coor" />
+  </div>
+</div>
+
+
