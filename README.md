@@ -10,7 +10,7 @@ Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Ho
 - Killing and collecting the items will gain you experience for level and power. Just beating the boss is not gonna bring you to the next realm, you must complete the spell puzzle using the stones gathered after killing the boss.
 
 ## 📐 Code Architecture 
-![](https://i.imgur.com/kA9iG6W.jpg)
+![](https://i.imgur.com/AhRp5oP.jpg)
 
 ## 📝 License
 #### [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)
