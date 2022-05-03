@@ -1,7 +1,7 @@
 # ⚔️ The First Dungeon ⚔️ 
 
 The First Dungeon is an RPG game project for Computing Practice Module, University of Plymouth. 
-Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Homepage") for 2D rendering and [ReactJS](https://reactjs.org/) for User Interface.
+Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Homepage") for 2D rendering and [VueJS](https://vuejs.org/) for User Interface.
 
 
 
@@ -16,7 +16,17 @@ Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Ho
 #### [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)
 
 ## ♥ Resources & Credits
-Todo
+- Here are the links for the sprites and assets used for the game.
+  - https://opengameart.org/content/lpc-trees
+  - https://opengameart.org/content/2d-lost-garden-tileset-transition-to-jetrels-wood-tileset
+  - https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
+  - https://sanctumpixel.itch.io/imp-axe-demon-pixel-art-character
+  - https://rvros.itch.io/animated-pixel-hero
+  - https://admurin.itch.io/free-chest-animations
+  - https://luizmelo.itch.io/monsters-creatures-fantasy
+  - https://opengameart.org/content/lpc-terrains
+  - https://opengameart.org/content/lpc-rocks
+  - https://opengameart.org/content/lpc-bricks
 
 ## Demo link
-[👉 Click here](https://johnl28.github.io/rpg/) 
+[👉 Click here](https://rpg.johnl.dev/) 
