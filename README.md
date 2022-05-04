@@ -28,5 +28,8 @@ Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Ho
   - https://opengameart.org/content/lpc-rocks
   - https://opengameart.org/content/lpc-bricks
 
+## Inputs
+ ![movement](https://user-images.githubusercontent.com/54412955/166667682-0db98f23-d392-4bc1-897a-3e5c87a2877f.png)
+
 ## Demo link
 [👉 Click here](https://rpg.johnl.dev/) 
