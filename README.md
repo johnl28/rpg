@@ -3,6 +3,7 @@
 The First Dungeon is an RPG game project for Computing Practice Module, University of Plymouth. 
 Coded in HTML, CSS, and JavaScript using [PixiJS](https://pixijs.com/ "PixiJS Homepage") for 2D rendering and [VueJS](https://vuejs.org/) for User Interface.
 
+![image](https://github.com/johnl28/rpg/assets/54412955/0432f923-90a8-4480-b0e5-5b43e787d7a4)
 
 
 ## 🎮 Gameplay
